@@ -1,5 +1,5 @@
 import React from "react";
-
+import Image from "next/image";
 export default function Shop() {
     return (
       <div className="max-w-6xl mx-auto py-12 px-6">
@@ -13,7 +13,7 @@ export default function Shop() {
 
           <div className="bg-white p-4 rounded-lg shadow-lg text-center">
 
-            <img 
+            <Image
               src="/dish-1.png/" 
               alt="Dish 1" 
               className="w-full h-40 object-cover rounded-md"
@@ -24,7 +24,7 @@ export default function Shop() {
           </div>
 
           <div className="bg-white p-4 rounded-lg shadow-lg text-center">
-            <img 
+            <Image
               src="/dish-2.png/" 
               alt="Dish 2" 
               className="w-full h-40 object-cover rounded-md"
@@ -36,7 +36,7 @@ export default function Shop() {
           </div>
  
           <div className="bg-white p-4 rounded-lg shadow-lg text-center">
-            <img 
+            <Image
               src="/dish-3.png/" 
               alt="Dish 3" 
               className="w-full h-40 object-cover rounded-md"
@@ -48,7 +48,7 @@ export default function Shop() {
   
 
           <div className="bg-white p-4 rounded-lg shadow-lg text-center">
-            <img 
+            <Image
               src="/dish-4.png/" 
               alt="Dish 4" 
               className="w-full h-40 object-cover rounded-md"
@@ -59,7 +59,7 @@ export default function Shop() {
           </div>
  
           <div className="bg-white p-4 rounded-lg shadow-lg text-center">
-            <img 
+            <Image
               src="/dish-5.png/" 
               alt="Dish 5" 
               className="w-full h-40 object-cover rounded-md"
@@ -78,7 +78,7 @@ export default function Shop() {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
      
           <div className="bg-gray-100 p-4 rounded-lg shadow-md text-center">
-            <img 
+            <Image 
               src="/side-owner.png/" 
               alt="" 
               className="w-16 h-16 mx-auto rounded-full"
@@ -92,7 +92,7 @@ export default function Shop() {
   
       
           <div className="bg-gray-100 p-4 rounded-lg shadow-md text-center">
-            <img 
+            <Image
               src="/chef-3.jpg/" 
               alt="Customer 2" 
               className="w-16 h-16 mx-auto rounded-full"
@@ -105,7 +105,7 @@ export default function Shop() {
   
         
           <div className="bg-gray-100 p-4 rounded-lg shadow-md text-center">
-            <img 
+            <Image 
               src="/chef-2.jpg/" 
               alt="" 
               className="w-16 h-16 mx-auto rounded-full"

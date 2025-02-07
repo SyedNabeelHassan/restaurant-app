@@ -67,7 +67,7 @@ export default function Footer() {
           </ul>
         </div>
 
-{/* Recent post */}
+
         <div>
           <h2 className="text-lg font-semibold mb-4">Recent Posts</h2>
           <ul className="space-y-4 text-sm text-gray-400">
@@ -93,6 +93,7 @@ export default function Footer() {
               </div>
             </li>
           </ul>
+
         </div>
       </div>
 
@@ -107,6 +108,7 @@ export default function Footer() {
             <a href="#"><img src="/icon-youtube.png" alt="YouTube" className="w-5 h-5" /></a>
           </div>
         </div>
+        
       </div>
     </div>
   );

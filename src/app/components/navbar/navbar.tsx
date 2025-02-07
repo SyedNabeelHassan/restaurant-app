@@ -4,9 +4,9 @@ import React from "react";
 
 export default function NavHead() {
   const icons = [
-    { src: "/search.png", link: "#" },  // No link for search
-    { src: "/user.png", link: "/login" },  // Link to Login page
-    { src: "/shopping-cart.png", link: "#" }  // No link for cart yet
+    { src: "/search.png", link: "#" },  
+    { src: "/user.png", link: "/login" },  
+    { src: "/shopping-cart.png", link: "#" }  
   ];
   return (
     <header className="w-full bg-black bg-black text-white">
