@@ -2,7 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import React from "react";
 
-export default function Footer() {
+export default function Footbar() {
   return (
     <div className="w-full bg-black text-white py-4 mt-auto">
 
@@ -10,10 +10,9 @@ export default function Footer() {
         <h2 className="text-2xl font-semibold text-orange-500">Still</h2>
         <h3 className="text-xl">You Need Our Support?</h3>
         <p className="text-gray-400 text-sm mt-2">
-          Don't wait, make a smart & logical quote here. It's pretty easy.
+          Don&#39;t wait, make a smart & logical quote here. It&#39;s pretty easy.
         </p>
-        <div className="mt-10
- flex justify-center items-center">
+        <div className="mt-10 flex justify-center items-center">
           <input
             type="email"
             placeholder="Enter Your Email"
@@ -24,7 +23,6 @@ export default function Footer() {
           </button>
         </div>
       </div>
-
 
       <div className="max-w-screen-xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 px-5">
 
@@ -42,8 +40,6 @@ export default function Footer() {
           </div>
 
         </div>
-
-
 
         <div>
           <h2 className="text-lg font-semibold mb-4">Useful Links</h2>
@@ -66,7 +62,6 @@ export default function Footer() {
             <li><Link href="/privacy">Privacy</Link></li>
           </ul>
         </div>
-
 
         <div>
           <h2 className="text-lg font-semibold mb-4">Recent Posts</h2>
@@ -93,23 +88,21 @@ export default function Footer() {
               </div>
             </li>
           </ul>
-
         </div>
       </div>
 
-
-      <div className=" py-2 mt-8 border-t border-gray-700 " >
+      <div className="py-2 mt-8 border-t border-gray-700">
         <div className="max-w-screen-xl mx-auto flex justify-between items-center px-5">
           <p className="text-sm text-gray-400">&copy; 2022 by Ayeman. All Rights Reserved.</p>
           <div className="flex gap-2">
-            <a href="#"><img src="/icon-facebook.png" alt="Facebook" className="w-5 h-5" /></a>
-            <a href="#"><img src="/icon-twitter.png" alt="Twitter" className="w-5 h-5" /></a>
-            <a href="#"><img src="/icon-instagram.png" alt="Instagram" className="w-5 h-5" /></a>
-            <a href="#"><img src="/icon-youtube.png" alt="YouTube" className="w-5 h-5" /></a>
+            <a href="#"><Image src="/icon-facebook.png" alt="Facebook" className="w-5 h-5" /></a>
+            <a href="#"><Image src="/icon-twitter.png" alt="Twitter" className="w-5 h-5" /></a>
+            <a href="#"><Image src="/icon-instagram.png" alt="Instagram" className="w-5 h-5" /></a>
+            <a href="#"><Image src="/icon-youtube.png" alt="YouTube" className="w-5 h-5" /></a>
           </div>
         </div>
-        
       </div>
+
     </div>
   );
 }

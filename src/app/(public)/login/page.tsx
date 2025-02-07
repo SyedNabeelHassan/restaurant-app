@@ -2,7 +2,7 @@ import Image from "next/image"
 import Link from "next/link"
 import React from "react";
 
-export default function(){
+export default function Signin(){
     return(<div className="flex items-center  gap-20 flex">
         <div>
             <Image src={'/side-image.png'} alt="side-image" width={805} height={781} className="w-full md:h-1/2 my-8"/>

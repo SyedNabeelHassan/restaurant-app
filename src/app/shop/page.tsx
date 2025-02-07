@@ -84,7 +84,8 @@ export default function Shop() {
               className="w-16 h-16 mx-auto rounded-full"
             />
             <p className="text-gray-600 italic mt-4">
-            "Proud to be part of a team that values quality and customer satisfaction!"
+            &quot;Proud to be part of a team that values quality and customer satisfaction!&quot;
+
 
             </p>
             <h3 className="text-lg font-semibold mt-2">John Doe</h3>
@@ -98,7 +99,8 @@ export default function Shop() {
               className="w-16 h-16 mx-auto rounded-full"
             />
             <p className="text-gray-600 italic mt-4">
-            "Every day is an opportunity to create amazing experiences for our guests!"
+            &quot;Every day is an opportunity to create amazing experiences for our guests!&quot;
+
             </p>
             <h3 className="text-lg font-semibold mt-2">Sarah Smith</h3>
           </div>
@@ -111,7 +113,8 @@ export default function Shop() {
               className="w-16 h-16 mx-auto rounded-full"
             />
             <p className="text-gray-600 italic mt-4">
-            "I love working here—great food, great people, and an even better atmosphere!"
+            &quot;I love working here—great food, great people, and an even better atmosphere!&quot;
+
             </p>
             <h3 className="text-lg font-semibold mt-2">Michael Brown</h3>
           </div>

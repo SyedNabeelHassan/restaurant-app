@@ -2,7 +2,7 @@ import Image from "next/image"
 import Link from "next/link"
 import React from "react";
 
-export default function(){
+export default function Signup(){
     return(<div className="flex items-center  gap-20 flex">
         <div>
             <Image src={'/side-image.png'} alt="side-image" width={805} height={781} className="w-full md:h-1/2 my-8"/>
@@ -27,7 +27,7 @@ export default function(){
                 
             </div > 
             <div className="flex items-center space-x-2 px-7 border border-black py-2 px- w-55 h-auto flex">
-  <img src="/Icon-Google.png" alt="Google Icon" className="w-5 h-5" />
+  <Image src="/Icon-Google.png" alt="Google Icon" className="w-5 h-5" />
   <Link href="" className="text-black text-align text-nowrap">
     Sign up with Google
   </Link>

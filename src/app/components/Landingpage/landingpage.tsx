@@ -51,7 +51,7 @@ export default function LandingPage() {
       <div className="ml-4">
         <p className="font-semibold text-lg">Md. Arafat Hossion</p>
         <p className="text-sm text-gray-400">Chef, London</p>
-        <p className="text-sm mt-2">"Amazing food and great ambiance. Will definitely visit again!"</p>
+        <p className="text-sm mt-2">&quot;Amazing food and great ambiance. Will definitely visit again!&quot;</p>
       </div>
     </div>
     <div className="p-6 bg-white rounded-lg shadow-lg flex items-start">
@@ -59,16 +59,12 @@ export default function LandingPage() {
       <div className="ml-4">
         <p className="font-semibold text-lg">Md. Mokbul Hossion</p>
         <p className="text-sm text-gray-400">Chef, London</p>
-        <p className="text-sm mt-2">"The best organic food I've ever had. Highly recommended!"</p>
-       
+        <p className="text-sm mt-2">&quot;The best organic food I&#39;ve ever had. Highly recommended!&quot;</p>
       </div>
-   
-          </div>
-       
-        </div>
-        
-      </div>
-  
+    </div>
+  </div>
+</div>
+
     </div>
   );
 }
