@@ -1,78 +1,220 @@
+"use client";
+
+import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
 
-export default function Blog() {
+type Blog = {
+  id: number;
+  title: string;
+  author: string;
+  date: string;
+  category: string;
+  excerpt: string;
+  image: string;
+};
+
+const blogs: Blog[] = [
+  {
+    id: 1,
+    title: "Blog Post 1",
+    author: "Author-1",
+    date: "August 14, 2021",
+    category: "Design",
+    excerpt: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt exercitatie magni, natus possimus obcaecati iste et dolorum tenetur amet. Iust",
+    image: "/dish-2.png",
+  },
+  {
+    id: 2,
+    title: "Blog Post 2",
+    author: "Author-2",
+    date: "August 14, 2021",
+    category: "Technology",
+    excerpt: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt exercitatie magni, natus possimus obcaecati iste et dolorum tenetur amet. Iust",
+    image: "/dish-3.png",
+  },
+  {
+    id: 3,
+    title: "Blog Post 3",
+    author: "Author-3",
+    date: "August 14, 2021",
+    category: "Travel",
+    excerpt: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt exercitatie magni, natus possimus obcaecati iste et dolorum tenetur amet. Iust",
+    image: "/dish-1.png",
+  },
+];
+
+const Blog = () => {
   return (
-    <div className="max-w-6xl mx-auto py-12 px-6">
+    <div>
+      <div className="py-16 space-y-2 bg-gray-100">
+        <h1 className="text-4xl font-bold  ml-8 lg:ml-36">Blog</h1>{" "}
+        <div className="flex items-center ml-8 lg:ml-36 gap-2">
+          <Link href={"/"}>Home</Link>
+          <span className="text-black mx-2">.</span>
+          <span className="text-[#000000]">Latest Blogs</span>
+        </div>
+      </div>
+      <div className="flex flex-col lg:flex-row lg:justify-center px-6 lg:px-20 py-10 bg-white">
+        <div className="lg:w-1/2">
+          {blogs.map((blog) => (
+            <div key={blog.id} className="mb-10">
+              <Image
+                src={blog.image}
+                alt={blog.title}
+                width={870}
+                height={453}
+                className="w-[35rem] h-80 object-cover rounded-md"
+              />
+              <div className="mt-4">
+                <div className="flex items-center text-sm text-gray-500 space-x-4">
+                  <span>{blog.author}</span>
+                  <span>{blog.date}</span>
+                  <span>{blog.category}</span>
+                </div>
+                <h2 className="text-xl font-bold mt-2 text-[#001F54]">
+                  {blog.title}
+                </h2>
+                <p className="text-gray-600 mt-2">{blog.excerpt}</p>
+                <a
+                  href="#"
+                  className="text-[#001F54] font-semibold mt-2 inline-block"
+                >
+                  Read More
+                </a>
+              </div>
+            </div>
+          ))}
+        </div>
 
-      <h1 className="text-4xl font-bold text-center text-gray-800 mb-10">Welcome to Our Blog</h1>
-      
+        <div className="lg:w-1/4 lg:pl-10 mt-10 lg:mt-0">
+          <div className="mb-6">
+            <h3 className="text-lg font-bold text-[#001F54] mb-2">Search</h3>
+            <input
+              type="text"
+              placeholder="Search here"
+              className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#001F54]"
+            />
+          </div>
 
-      <section className="text-center mb-12">
-        <h2 className="text-3xl font-semibold text-gray-700">Who We Are</h2>
-        <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
-          We are a passionate team dedicated to serving delicious meals 24/7. From fresh ingredients to
-          high-quality coffee, we ensure every bite is delightful.
-        </p>
-      </section>
-      
+          <div className="mb-6">
+            <h3 className="text-lg font-bold text-[#001F54] mb-2">
+              Categories
+            </h3>
+            <ul className="space-y-2 text-gray-600">
+              <li>BBQ (7)</li>
+              <li>Cake (15)</li>
+              <li>Drinks (5)</li>
+            </ul>
+          </div>
+          <div className="mb-6">
+            <h3 className="text-lg font-bold text-[#001F54] mb-2">
+              Recent Posts
+            </h3>
+            <ul className="space-y-2">
+              {[
+                {
+                  id: 4,
+                  image: "/dish-1.png",
+                  title: "Recent Blog 1",
+                  date: "December 6, 2024",
+                },
+                {
+                  id: 5,
+                  image: "/cappuccino.jpg",
+                  title: "Recent Blog 2",
+                  date: "December 5, 2024",
+                },
+                {
+                  id: 6,
+                  image: "/espresso.png",
+                  title: "Recent Blog 3",
+                  date: "December 4, 2024",
+                },
+              ].map((blog) => (
+                <li key={blog.id} className="flex items-center space-x-4">
+                  <Image
+                    src={blog.image}
+                    alt={blog.title}
+                    width={500}
+                    height={500}
+                    className="w-16 h-16 object-cover rounded-md"
+                  />
+                  <div>
+                    <h4 className="text-sm font-semibold text-[#001F54]">
+                      {blog.title}
+                    </h4>{" "}
+                    <p className="text-sm text-gray-500">{blog.date}</p>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </div>
 
-      <section className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div className="bg-white p-6 rounded-lg text-center">
-          <Image src="/24hr-service.png" alt="24 Hour Service" width={270} height={78} className="rounded-md mx-auto" />
-          <h3 className="text-xl font-semibold mt-4">24/7 Service</h3>
-          <p className="text-gray-600">We are open round the clock to serve you delicious meals anytime.</p>
+          <div>
+            <h3 className="text-lg font-bold text-[#001F54] mb-2">Tags</h3>
+            <div className="flex flex-wrap gap-2">
+              {["bakers", "new", "healthy", "popular", "Food"].map(
+                (tag, index) => (
+                  <span
+                    key={index}
+                    className="px-3 py-1 bg-gray-200 text-sm text-gray-600 rounded-full"
+                  >
+                    {tag}
+                  </span>
+                )
+              )}
+            </div>
+          </div>
+          <div className="mb-6 mt-24">
+            <h3 className="text-lg font-bold text-[#001F54] mb-2">
+              Sale Product
+            </h3>
+            <ul className="space-y-2">
+              {[
+                {
+                  id: 4,
+                  image: "/dish-2.png",
+                  title: "Recent Blog 1",
+                  date: "December 6, 2024",
+                },
+                {
+                  id: 5,
+                  image: "/dish-4.png",
+                  title: "Recent Blog 2",
+                  date: "December 5, 2024",
+                },
+                {
+                  id: 6,
+                  image: "/dish-5.png",
+                  title: "Recent Blog 3",
+                  date: "December 4, 2024",
+                },
+              ].map((blog) => (
+                <li key={blog.id} className="flex items-center space-x-4">
+                  <Image
+                    src={blog.image}
+                    alt={blog.title}
+                    width={500}
+                    height={500}
+                    className="w-16 h-16 object-cover rounded-md"
+                  />
+                  <div>
+                    <h4 className="text-sm font-semibold text-[#001F54]">
+                      {blog.title}
+                    </h4>{" "}
+                    <p className="text-sm text-gray-500">{blog.date}</p>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
         
-        <div className="bg-white p-6 rounded-lg text-center">
-          <Image src="/fresh-food.png" alt="Fresh Food" width={260} height={78} className="rounded-md mx-auto" />
-          <h3 className="text-xl font-semibold mt-4">Fresh Ingredients</h3>
-          <p className="text-gray-600">We use only the freshest ingredients to create delicious meals.</p>
-        </div>
-
-        <div className="bg-white p-6 rounded-lg  text-center">
-          <Image src="/high-quality-coffee.png" alt="High Quality Coffee" width={300} height={200} className="rounded-md mx-auto" />
-          <h3 className="text-xl font-semibold mt-4">High-Quality Coffee</h3>
-          <p className="text-gray-600">Enjoy the finest coffee blends, brewed to perfection.</p>
-        </div>
-      </section>
+      </div>
       
-    
-      <section className="mt-12">
-
-        <h2 className="text-3xl font-semibold text-center text-gray-800 mb-6">Our Coffee Recipes</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-          <div className="bg-gray-100 p-6 rounded-lg shadow-md text-center">
-
-
-            <Image src="/espresso.png" alt="Espresso" width={300} height={200} className="rounded-md mx-auto" />
-
-            <h3 className="text-xl font-semibold mt-4">Classic Espresso</h3>
-            <p className="text-gray-600">A perfect shot of rich and smooth espresso.</p>
-            <Link href="/recipes/espresso" className="mt-4 inline-block bg-green-600 text-white px-4 py-2 rounded-lg">Learn More</Link>
-          </div>
-
-          <div className="bg-gray-100 p-6 rounded-lg shadow-md text-center">
-            <Image src="/cappuccino.jpg" alt="Cappuccino" width={300} height={200} className="rounded-md mx-auto" />
-            <h3 className="text-xl font-semibold mt-4">Creamy Cappuccino</h3>
-
-            <p className="text-gray-600">Smooth, frothy, and perfect for coffee lovers.</p>
-
-            <Link href="/recipes/cappuccino" className="mt-4 inline-block bg-green-600 text-white px-4 py-2 rounded-lg">Learn More</Link>
-          </div>
-          
-          <div className="bg-gray-100 p-6 rounded-lg shadow-md text-center">
-            <Image src="/iced-coffee.jpg" alt="Iced Coffee" width={300} height={200} className="rounded-md mx-auto" />
-            <h3 className="text-xl font-semibold mt-4">Refreshing Iced Coffee</h3>
-
-            <p className="text-gray-600">Perfectly chilled coffee for hot days.</p>
-            <Link href="/recipes/iced-coffee" className="mt-4 inline-block bg-green-600 text-white px-4 py-2 rounded-lg">Learn More</Link>
-          </div>
-        </div>
-
-      </section>
     </div>
   );
-}
+};
+
+export default Blog;
