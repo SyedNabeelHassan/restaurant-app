@@ -95,8 +95,8 @@ export default function Footbar() {
         <div className="max-w-screen-xl mx-auto flex justify-between items-center px-5">
           <p className="text-sm text-gray-400">&copy; 2022 by Ayeman. All Rights Reserved.</p>
           <div className="flex gap-2">
-            <a href="#"><Image src="/icon-facebook.png" alt="Facebook" width={24} height={24} className="w-5 h-5" /></a>
-            <a href="#"><Image src="/icon-twitter.png" alt="Twitter" width={24} height={24} className="w-5 h-5" /></a>
+            <a href="#"><Image src="/small-facebook.png" alt="Facebook" width={24} height={24} className="w-5 h-5" /></a>
+            <a href="#"><Image src="/small-twitter.png" alt="Twitter" width={24} height={24} className="w-5 h-5" /></a>
             <a href="#"><Image src="/icon-instagram.png" alt="Instagram" width={24} height={24} className="w-5 h-5" /></a>
             <a href="#"><Image src="/icon-youtube.png" alt="YouTube" width={24} height={24} className="w-5 h-5" /></a>
           </div>
